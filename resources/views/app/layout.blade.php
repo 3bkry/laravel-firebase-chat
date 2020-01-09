@@ -28,7 +28,7 @@
     <!-- NAVBAR -->
     <div class="ui large top fixed menu transition visible" style="display: flex !important;">
       <div class="ui container">
-        <a href="{{route('inicio')}}" class="item"><i class="user circle icon"></i> {{Auth::user()->username}}</a>
+        <a href="{{route('inicio')}}" class="item"><i class="user circle icon"></i> UserName</a>
         <div class="right menu">
           <div class="item">
             <a id="logoutButton" class="ui red button"><i class="sign out icon"></i> Cerrar Sesión</a>
