@@ -29,7 +29,7 @@
                     <div class="ui segment" style="padding: 1.5em 1.5em;">
                         <div class="ui comments" style="max-width: 100%;">
                             <h3 class="ui dividing header"><i class="talk outline icon"></i> Conversación con {{ $receptorUser->name }}</h3>
-                            <firebase-messages user-id="{{ Auth::user()->id }}" chat-id="{{ $chat->id }}" receptor-name="{{ $receptorUser->name }}"></firebase-messages>
+                            <firebase-messages user-id="1" chat-id="{{ $chat->id }}" receptor-name="{{ $receptorUser->name }}"></firebase-messages>
                         </div>
                     </div>
                     
