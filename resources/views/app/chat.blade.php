@@ -44,12 +44,14 @@
     <script>
         // Initialize Firebase
         var config = {
-          apiKey: "{{ env('FIREBASE_APIKEY') }}",
-          authDomain: "{{ env('FIREBASE_AUTHDOMAIN') }}",
-          databaseURL: "{{ env('FIREBASE_DATABASEURL') }}",
-          projectId: "{{ env('FIREBASE_PROJECT_ID') }}",
-          storageBucket: "{{ env('FIREBASE_STORAGEBUCKET') }}",
-          messagingSenderId: "{{ env('FIREBASE_MESSAGINGSENDER_ID') }}"
+            apiKey: "AIzaSyB2M186j6R30d5t1d0aHgK0aubGB7Kz0vA",
+            authDomain: "appchaty-d0dc3.firebaseapp.com",
+            databaseURL: "https://appchaty-d0dc3.firebaseio.com",
+            projectId: "appchaty-d0dc3",
+            storageBucket: "appchaty-d0dc3.appspot.com",
+            messagingSenderId: "364372720721",
+            appId: "1:364372720721:web:398d5cb09010b4771f4c70",
+            measurementId: "G-MM71K3YDJN"
         };
         firebase.initializeApp(config);
 
