@@ -39,7 +39,7 @@ class AppController extends Controller
     public function usersAnChat($userName)
     {
         $users = User::where('id', '!=', 1)->take(10)->get();
-        $chat = $this->hasChatWith(2);
+        $chat = $this->hasChatWith2(2);
         return view('app.chat', compact('receptorUser', 'chat', 'users'));
         /*
         $receptorUser = User::where('username', '=', $userName)->first();
@@ -51,6 +51,20 @@ class AppController extends Controller
             return view('app.chat', compact('receptorUser', 'chat', 'users'));
         }
         */
+    }
+
+    public function hasChatWith2($userId)
+    {
+        $chat = Chat::where('user_id1', 1)
+            ->where('user_id2', $userId)
+            ->orWhere('user_id1', $userId)
+            ->where('user_id2', 1)
+            ->get();
+        if(!$chat->isEmpty()){
+            return $chat->first();
+        }else{
+            return $this->createChat(1, $userId);;
+        }
     }
 
     public function hasChatWith($userId)
