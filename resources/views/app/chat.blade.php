@@ -1,4 +1,3 @@
-@extends('app.layout')
 
 @section('title', 'Chat | Laravel Chat')
 
