@@ -41,6 +41,7 @@ class AppController extends Controller
         $receptorUser = User::where('username', '=', $userName)->first();
         $users = User::where('id', '!=', 1)->take(10)->get();
         $chat = $this->hasChatWith2(2);
+        dd($chat);
         return view('app.chat', compact('receptorUser', 'chat', 'users'));
         /*
         $receptorUser = User::where('username', '=', $userName)->first();
