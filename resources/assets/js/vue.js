@@ -12,7 +12,7 @@ window.moment = moment;
 window.pushjs = pushjs;
 
 Vue.use(VueAxios, axios);
-Vue.component('firebase-messages', require('./components/Example.vue'));
+Vue.component('firebase-messages', require('./components/Message.vue'));
 
 const app = new Vue({
     el: '#app'
