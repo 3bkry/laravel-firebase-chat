@@ -3,7 +3,7 @@
 @section('title', 'Chat | Laravel Chat')
 
 @section('content')
-    <div id="app" class="ui main container" style="margin-top:65px;">
+    <div id="app" class="ui main container">
         <div class="ui grid">
             <div class="row">
 
