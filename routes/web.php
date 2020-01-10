@@ -35,4 +35,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/inicio', ['as' => 'inicio', 'uses' => 'AppController@index']);
     Route::get('chat/{username}',['as' => 'chat', 'uses' => 'AppController@usersChat']);
 });
-Route::get('chats/{username}',['as' => 'chat', 'uses' => 'AppController@usersAnChat']);
+Route::get('chats',['as' => 'chat', 'uses' => 'AppController@usersAnChat']);

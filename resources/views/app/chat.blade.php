@@ -6,30 +6,12 @@
     <div id="app" class="ui main container" style="margin-top:65px;">
         <div class="ui grid">
             <div class="row">
-                <div class="three wide column">
-                    <div class="ui vertical pointing menu">
-                        <h3 class="item ui header">
-                            Usuarios:
-                        </h3>
-                        @foreach($users as $user)
-                            @if($user->id == $receptorUser->id)
-                                <a href="{{route('chat', [$user->username])}}" class="active item">
-                                    {{ $user->name }}
-                                </a>
-                            @else
-                                <a href="{{route('chat', [$user->username])}}" class="item">
-                                    {{ $user->name }}
-                                </a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
 
                 <div class="thirteen wide column">
                     <div class="ui segment" style="padding: 1.5em 1.5em;">
                         <div class="ui comments" style="max-width: 100%;">
-                            <h3 class="ui dividing header"><i class="talk outline icon"></i> Conversación con {{ $receptorUser->name }}</h3>
-                            <firebase-messages user-id="1" chat-id="500" receptor-name="{{ $receptorUser->name }}"></firebase-messages>
+                            <h3 class="ui dividing header"><i class="talk outline icon"></i> Conversación con {{ $chat_id }}</h3>
+                            <firebase-messages user-id="{{ $user_id }}" chat-id="{{ $chat_id }}" receptor-name="{{ $chat_id }}"></firebase-messages>
                         </div>
                     </div>
                     

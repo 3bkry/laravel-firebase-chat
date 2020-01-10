@@ -36,22 +36,12 @@ class AppController extends Controller
     }
 
 
-    public function usersAnChat($userName)
+    public function usersAnChat()
     {
-        $receptorUser = User::where('username', '=', $userName)->first();
-        $users = User::where('id', '!=', 1)->take(10)->get();
+        $user_id = 1;
+        $chat_id = 500;
         $chat = $this->hasChatWith2(2);
-        return view('app.chat', compact('receptorUser', 'chat', 'users'));
-        /*
-        $receptorUser = User::where('username', '=', $userName)->first();
-        if($receptorUser == null) {
-            return view('app.nousernamefinded', compact('userName'));
-        }else {
-            $users = User::where('id', '!=', Auth::user()->id)->take(10)->get();
-            $chat = $this->hasChatWith($receptorUser->id);
-            return view('app.chat', compact('receptorUser', 'chat', 'users'));
-        }
-        */
+        return view('app.chat', compact('user_id', 'chat_id'));
     }
 
     public function hasChatWith2($userId)
