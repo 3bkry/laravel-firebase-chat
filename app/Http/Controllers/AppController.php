@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Chat;
 use Auth;
+use Illuminate\Support\Facades\Input;
 
 class AppController extends Controller
 {
@@ -38,8 +39,8 @@ class AppController extends Controller
 
     public function usersAnChat()
     {
-        $user_id = 1;
-        $chat_id = 500;
+        $user_id = Input::get("user_id");
+        $chat_id = Input::get("chat_id");
         $chat = $this->hasChatWith2(2);
         return view('app.chat', compact('user_id', 'chat_id'));
     }
