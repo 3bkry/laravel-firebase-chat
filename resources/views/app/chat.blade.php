@@ -37,5 +37,12 @@
 
         const database = firebase.database();
     </script>
+
+    <script>
+        window.onload=function () {
+            var objDiv = document.getElementById("comments-container");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+    </script>
     <script src="{{ asset('js/myapp.js?').mt_rand() }}"></script>
 @endsection
