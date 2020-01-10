@@ -31749,6 +31749,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         database.ref('/chats/' + this.chatId).on('value', function (snapshot) {
             return _this.loadMessages(snapshot.val());
         });
+        document.querySelector('#comments-container').scrollTop = document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
     },
 
     methods: {
@@ -31785,7 +31786,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         getUserName: function getUserName(id) {
             if (id == this.message.userId) {
-                return "شخص غريب x";
+                return "شخص مجهول x";
             } else {
                 return "شخص غريب z";
             }
@@ -31826,7 +31827,7 @@ var render = function() {
   return _c("div", [
     !_vm.firebaseMessagesLoaded
       ? _c("div", { staticClass: "ui active centered inline text loader" }, [
-          _vm._v("Cargando conversación...")
+          _vm._v("انتظر قليلا...")
         ])
       : _vm._e(),
     _vm._v(" "),
@@ -31918,6 +31919,7 @@ var render = function() {
       "form",
       {
         staticClass: "ui reply form",
+        attrs: { dir: "rtl" },
         on: {
           submit: function($event) {
             $event.preventDefault()

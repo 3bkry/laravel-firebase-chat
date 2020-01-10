@@ -73,8 +73,10 @@
             }
         },
         mounted(){
+
             database.ref('/chats/' + this.chatId)
                 .on('value', snapshot => this.loadMessages(snapshot.val()))
+
         },
         methods:{
 
