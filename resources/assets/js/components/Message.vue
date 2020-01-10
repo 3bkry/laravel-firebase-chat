@@ -51,7 +51,7 @@
                 <input v-model="message.text" placeholder="Escribe tu mensaje" type="text">
             </div>
             <button type="submit" class="ui blue labeled submit icon button">
-              <i class="send outline icon"></i> Enviar
+              <i class="send outline icon"></i> ارسال
             </button>
         </form>
     </div>
