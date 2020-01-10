@@ -10,7 +10,7 @@
                 <div class="thirteen wide column">
                     <div class="ui segment" style="padding: 1.5em 1.5em;">
                         <div class="ui comments" style="max-width: 100%;">
-                            <h3 class="ui dividing header"><i class="talk outline icon"></i>محادثه جديده</h3>
+                            <h3 class="ui dividing header" dir="rtl"><i class="talk outline icon"></i>محادثه جديده</h3>
                             <firebase-messages user-id="{{ $user_id }}" chat-id="{{ $chat_id }}" receptor-name="{{ $chat_id }}"></firebase-messages>
                         </div>
                     </div>

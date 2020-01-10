@@ -18,6 +18,11 @@
     [v-cloak] {
       display: none;
     }
+
+    .ui.column.grid>[class*="thirteen wide"].column, .ui.grid>.column.row>[class*="thirteen wide"].column, .ui.grid>.row>[class*="thirteen wide"].column, .ui.grid>[class*="thirteen wide"].column {
+        width: 100%!important;
+    }
+
     </style>
 
     </script>

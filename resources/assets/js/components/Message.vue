@@ -47,7 +47,7 @@
          </div>
 
 
-        <form @submit.prevent="sendMessage()" class="ui reply form">
+        <form @submit.prevent="sendMessage()" class="ui reply form" dir="rtl">
             <div class="field">
                 <input v-model="message.text" placeholder="اكتب رسالتك هنا سم اضغط على ارسال" type="text">
             </div>
