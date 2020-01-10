@@ -42,13 +42,14 @@
         </div>
 
          <div v-if="firebaseMessagesLoaded && historyMessages.length < 1">
-            <p><small>No Hay Mensajes, envía el primero para iniciar la conversación.</small></p>
+            <p><small>أرسل أول رساله لبدء المحادثة.
+            </small></p>
          </div>
       
 
         <form @submit.prevent="sendMessage()" class="ui reply form">
             <div class="field">
-                <input v-model="message.text" placeholder="Escribe tu mensaje" type="text">
+                <input v-model="message.text" placeholder="اكتب رسالتك هنا سم اضغط على ارسال" type="text">
             </div>
             <button type="submit" class="ui blue labeled submit icon button">
               <i class="send outline icon"></i> ارسال
@@ -111,9 +112,9 @@
 
             getUserName(id){
                 if(id == this.message.userId) {
-                    return "Tú";
+                    return "شخص غريب x";
                 }else {
-                    return this.receptorName
+                    return "شخص غريب z"
                 }
             },
 
