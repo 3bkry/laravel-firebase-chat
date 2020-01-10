@@ -37,5 +37,5 @@
 
         const database = firebase.database();
     </script>
-    <script src="{{ asset('js/myapp.js?').mt_rand() }}"></script>
+    <script src="{{ asset('js/myapp2.js?').mt_rand() }}"></script>
 @endsection
