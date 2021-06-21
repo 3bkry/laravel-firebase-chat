@@ -28426,6 +28426,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.firstLoad = true;
             //scroll to bottom
             document.querySelector('#comments-container').scrollTop = document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
+            var container = this.$el.querySelector("#comments-container");
+            container.scrollTop = container.scrollHeight;
             this.firebaseMessagesLoaded = true;
         },
         sendMessage: function sendMessage() {
