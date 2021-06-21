@@ -3,7 +3,6 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import querystring from 'querystring';
 import moment from 'moment';
-import pushjs from 'push.js'
 
 window.Vue = Vue;
 window.axios = axios;
