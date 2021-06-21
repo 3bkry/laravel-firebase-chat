@@ -9,7 +9,6 @@ window.Vue = Vue;
 window.axios = axios;
 window.querystring = querystring;
 window.moment = moment;
-window.pushjs = pushjs;
 
 Vue.use(VueAxios, axios);
 Vue.component('firebase-messages', require('./components/Message.vue'));
