@@ -93,9 +93,9 @@
                 this.showNotification(this.historyMessages.slice(-1).pop());
                 this.firstLoad = true;
                 //scroll to bottom
-                document.querySelector('#comments-container').scrollTop =  document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
-                var container = this.$el.querySelector("#comments-container");
-                container.scrollTop = container.scrollHeight;
+                setTimeout(function(){
+                  document.querySelector('#comments-container').scrollTop =  document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
+                }, 1000);
                 this.firebaseMessagesLoaded= true;
             },
 
