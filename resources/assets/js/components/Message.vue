@@ -95,7 +95,7 @@
                 //scroll to bottom
                 setTimeout(function(){
                   document.querySelector('#comments-container').scrollTop =  document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
-                }, 1000);
+                }, 300);
                 this.firebaseMessagesLoaded= true;
             },
 
