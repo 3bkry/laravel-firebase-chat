@@ -1,6 +1,6 @@
 @extends('app.layout')
 
-@section('title', 'Chat | Laravel Chat')
+@section('title', 'Customer Chat')
 
 @section('content')
     <div id="app" class="ui main container">
@@ -38,24 +38,6 @@
         const database = firebase.database();
     </script>
 
-    <script>
-
-        setTimeout(function(){
-            var objDiv = document.getElementById("comments-container");
-            objDiv.scrollTop = objDiv.scrollHeight;
-            }, 2000);
-
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92245544-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-92245544-1');
-    </script>
 
 
     <script src="{{ asset('js/myapp.js?').mt_rand() }}"></script>
