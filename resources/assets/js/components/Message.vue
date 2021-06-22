@@ -49,7 +49,7 @@
 
         <form @submit.prevent="sendMessage()" class="ui reply form" dir="rtl">
             <div class="field">
-                <input v-model="message.text" placeholder="اكتب رسالتك هنا سم اضغط على ارسال" type="text">
+                <input v-model="message.text" placeholder="اكتب رسالتك هنا ثم اضغط على ارسال" type="text">
             </div>
             <button type="submit" class="ui blue labeled submit icon button">
               <i class="send outline icon"></i> ارسال
@@ -95,7 +95,7 @@
                 //scroll to bottom
                 setTimeout(function(){
                   document.querySelector('#comments-container').scrollTop =  document.querySelector('#comments-container').scrollHeight - document.querySelector('#comments-container').clientHeight;
-                }, 300);
+                }, 200);
                 this.firebaseMessagesLoaded= true;
             },
 
@@ -109,8 +109,24 @@
                     .then(() => {
                         this.message.text = '';
                     });
+
+                  const requestOptions = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(
+                        {
+                          "from": "page",
+                          "to": this.userId,
+                          "text": this.message.text
+                        }
+                    )
+                  };
+                  fetch("https://customerservice.dospost.com/send", requestOptions)
+                      .then(response => response.json());
+
+
                 }else {
-                    alert('Primero debes escribir algo antes de enviar');
+                    alert('يجب كتابة شئ قبل الارسال');
                 }
             },
 
