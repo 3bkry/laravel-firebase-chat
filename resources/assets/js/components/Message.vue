@@ -101,7 +101,7 @@
 
             sendMessage(){
                 if(this.message.text.length > 0){
-                    database.ref('/chats/' + this.chatId).push({
+                    database.ref('/chats/' + this.chatId).set({
                         userId: this.userId,
                         text: this.message.text,
                         date: moment().format()
