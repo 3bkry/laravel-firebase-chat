@@ -11,7 +11,7 @@
                     <div class="ui segment" style="padding: 1.5em 1.5em;">
                         <div class="ui comments" style="max-width: 100%;">
                             <h5 class="ui dividing header" dir="rtl"><i class="talk outline icon"></i>محادثه جديده</h5>
-                            <firebase-messages user-id="{{ $user_id }}" opeartor-id="{{ $operator_id }}" chat-id="{{ $chat_id }}" receptor-name="{{ $chat_id }}"></firebase-messages>
+                            <firebase-messages user-id="{{ $user_id }}" operator-id="{{ $operator_id }}" chat-id="{{ $chat_id }}" receptor-name="{{ $chat_id }}"></firebase-messages>
                         </div>
                     </div>
                     
