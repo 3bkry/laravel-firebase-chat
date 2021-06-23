@@ -134,7 +134,7 @@
                 if(id == this.message.userId) {
                     return this.clientName;
                 }else {
-                    return "شخص غريب z"
+                  return this.clientName;
                 }
             },
 
