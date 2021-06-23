@@ -60,7 +60,7 @@
 
 <script>
     export default {
-        props: ['userId', 'chatId', 'receptorName'],
+        props: ['userId','operatorId','chatId', 'receptorName'],
         data() {
             return {
                 message: {
@@ -102,7 +102,7 @@
             sendMessage(){
                 if(this.message.text.length > 0){
                     database.ref('/chats/' + this.chatId).push({
-                        userId: this.userId,
+                        userId: this.operatorId,
                         text: this.message.text,
                         date: moment().format()
                     })
