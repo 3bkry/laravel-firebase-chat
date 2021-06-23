@@ -10,7 +10,7 @@
                           <img src="/img/avatar/default.jpg">
                         </a>
                         <div class="content">
-                          <a class="author">{{ getUserName(message.userId) }}</a>
+                          <a class="author">الدعم الفنى</a>
                           <div class="metadata">
                             <span class="date">{{ humanize(message.date)  }}</span>
                           </div>
