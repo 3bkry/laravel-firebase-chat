@@ -30,7 +30,7 @@
                           <div class="metadata">
                             <span class="date">{{ humanize(message.date) }}</span>
                           </div>
-                          <a class="author">شخص مجهول x</a>
+                          <a class="author">{{ getUserName(message.userId) }}</a>
 
                           <div class="text">
                             <p>{{ message.text }}</p>
