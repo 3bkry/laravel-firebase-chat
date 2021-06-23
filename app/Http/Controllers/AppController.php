@@ -42,8 +42,9 @@ class AppController extends Controller
         $user_id     = Input::get("user_id");
         $chat_id     = Input::get("chat_id");
         $operator_id = Input::get("operator_id");
+        $client_name = Input::get("client_name");
         $chat = $this->hasChatWith2(2);
-        return view('app.chat', compact('user_id', 'chat_id','operator_id'));
+        return view('app.chat', compact('user_id', 'chat_id','operator_id','client_name'));
     }
 
     public function hasChatWith2($userId)

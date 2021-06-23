@@ -60,7 +60,7 @@
 
 <script>
     export default {
-        props: ['userId','operatorId','chatId', 'receptorName'],
+        props: ['userId','operatorId','chatId', 'clientName'],
         data() {
             return {
                 message: {
@@ -132,7 +132,7 @@
 
             getUserName(id){
                 if(id == this.message.userId) {
-                    return "شخص مجهول x";
+                    return this.clientName;
                 }else {
                     return "شخص غريب z"
                 }
