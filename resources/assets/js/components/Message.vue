@@ -24,7 +24,7 @@
                 <div v-else class="sixteen wide column">
                     <div  class="comment" style="text-align: right;">
                         <a class="avatar" style="float:right;">
-                          <img src="/img/avatar/user.jpg">
+                          <img src="/img/avatar/client.jpg">
                         </a>
                         <div class="content" style="margin-left:0;margin-right: 3.5em;">
                           <div class="metadata">
