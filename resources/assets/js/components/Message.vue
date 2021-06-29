@@ -74,7 +74,7 @@
         },
         mounted(){
 
-            database.ref('/chats/' + this.chatId)
+            database.ref('/chats/' + this.userId)
                 .on('value', snapshot => this.loadMessages(snapshot.val()))
 
         },
@@ -101,7 +101,7 @@
 
             sendMessage(){
                 if(this.message.text.length > 0){
-                    database.ref('/chats/' + this.chatId).push({
+                    database.ref('/chats/' + this.userId).push({
                         userId: this.operatorId,
                         text: this.message.text,
                         date: moment().format()
